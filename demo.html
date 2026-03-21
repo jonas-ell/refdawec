@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>refdawec — Automated TikTok Movie Clip Producer</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #0a0a0a; color: #fff; font-family: 'Arial', sans-serif; }
+
+    header {
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #222;
+    }
+    header .logo { font-size: 1.4rem; font-weight: bold; letter-spacing: 2px; color: #fff; }
+    header .domain { font-size: 0.85rem; color: #888; }
+
+    .hero {
+      text-align: center;
+      padding: 80px 20px 60px;
+    }
+    .hero h1 { font-size: 2.6rem; font-weight: 900; margin-bottom: 16px; }
+    .hero h1 span { color: #fe2c55; }
+    .hero p { color: #aaa; font-size: 1.1rem; max-width: 560px; margin: 0 auto 40px; }
+
+    .pipeline {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0;
+      flex-wrap: wrap;
+      padding: 0 20px 80px;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    .step {
+      background: #161616;
+      border: 1px solid #2a2a2a;
+      border-radius: 12px;
+      padding: 22px 18px;
+      text-align: center;
+      width: 140px;
+      position: relative;
+    }
+    .step .icon { font-size: 2rem; margin-bottom: 10px; }
+    .step .label { font-size: 0.78rem; color: #ccc; line-height: 1.4; }
+    .step .num {
+      position: absolute;
+      top: -10px; left: -10px;
+      background: #fe2c55;
+      color: #fff;
+      font-size: 0.7rem;
+      font-weight: bold;
+      border-radius: 50%;
+      width: 22px; height: 22px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .arrow {
+      color: #444;
+      font-size: 1.4rem;
+      padding: 0 6px;
+      margin-bottom: 10px;
+    }
+
+    .demo-box {
+      background: #111;
+      border: 1px solid #2a2a2a;
+      border-radius: 16px;
+      max-width: 700px;
+      margin: 0 auto 80px;
+      padding: 30px 40px;
+    }
+    .demo-box h2 { font-size: 1rem; color: #888; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px; }
+    .log-line {
+      font-family: monospace;
+      font-size: 0.85rem;
+      padding: 6px 0;
+      border-bottom: 1px solid #1a1a1a;
+      color: #ccc;
+    }
+    .log-line .ts { color: #555; margin-right: 10px; }
+    .log-line .ok { color: #00c853; }
+    .log-line .err { color: #fe2c55; }
+    .log-line .info { color: #69b4ff; }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #555;
+      font-size: 0.8rem;
+      border-top: 1px solid #1a1a1a;
+    }
+    footer a { color: #888; margin: 0 10px; text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">refdawec</div>
+  <div class="domain">refdawecus.tech</div>
+</header>
+
+<div class="hero">
+  <h1>Automated <span>TikTok</span> Movie Clips</h1>
+  <p>Daily short-form video content about trending movie moments — researched, scripted, voiced, edited and posted automatically via TikTok Content Posting API.</p>
+</div>
+
+<div class="pipeline">
+  <div class="step"><div class="num">1</div><div class="icon">🔍</div><div class="label">Trend Research<br><small style="color:#666">Apify scraper</small></div></div>
+  <div class="arrow">→</div>
+  <div class="step"><div class="num">2</div><div class="icon">✍️</div><div class="label">Script Writing<br><small style="color:#666">AI generated</small></div></div>
+  <div class="arrow">→</div>
+  <div class="step"><div class="num">3</div><div class="icon">🎙️</div><div class="label">Voice Over<br><small style="color:#666">ElevenLabs</small></div></div>
+  <div class="arrow">→</div>
+  <div class="step"><div class="num">4</div><div class="icon">🎬</div><div class="label">Video Edit<br><small style="color:#666">FFmpeg</small></div></div>
+  <div class="arrow">→</div>
+  <div class="step"><div class="num">5</div><div class="icon">📱</div><div class="label">Post to TikTok<br><small style="color:#666">Content API</small></div></div>
+</div>
+
+<div class="demo-box">
+  <h2>Today's Run Log — 09:00 UTC</h2>
+  <div class="log-line"><span class="ts">09:00:01</span><span class="info">STEP 1</span> — Fetching trends via Apify...</div>
+  <div class="log-line"><span class="ts">09:00:18</span><span class="ok">✓</span> Best topic: "The director hid something in this scene..."</div>
+  <div class="log-line"><span class="ts">09:00:19</span><span class="info">STEP 2</span> — Script written (42 sec / 187 words)</div>
+  <div class="log-line"><span class="ts">09:00:21</span><span class="info">STEP 3</span> — Generating voice over (ElevenLabs / Adam)...</div>
+  <div class="log-line"><span class="ts">09:00:34</span><span class="ok">✓</span> voiceover.mp3 saved — 41.3s</div>
+  <div class="log-line"><span class="ts">09:00:36</span><span class="info">STEP 4</span> — Sourcing video clip (Pexels)...</div>
+  <div class="log-line"><span class="ts">09:00:52</span><span class="ok">✓</span> Clip OK: 1080×1920, 60s</div>
+  <div class="log-line"><span class="ts">09:01:03</span><span class="info">STEP 5</span> — Whisper transcription + FFmpeg encode...</div>
+  <div class="log-line"><span class="ts">09:01:41</span><span class="ok">✓</span> final_20260321.mp4 — 1080×1920, 53s, 10.6MB</div>
+  <div class="log-line"><span class="ts">09:01:42</span><span class="info">STEP 6</span> — Posting to TikTok Content API...</div>
+  <div class="log-line"><span class="ts">09:01:44</span><span class="ok">✓</span> Posted! publish_id: v_pub_url~v3:7351823049...</div>
+  <div class="log-line"><span class="ts">09:01:44</span><span class="ok">✓</span> Logged to history.json — status: posted</div>
+</div>
+
+<footer>
+  <a href="/privacy.html">Privacy Policy</a>
+  <a href="/terms.html">Terms of Service</a>
+  <span>© 2026 refdawecus.tech</span>
+</footer>
+
+</body>
+</html>
